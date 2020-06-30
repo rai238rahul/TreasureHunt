@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>GAME_PAGE</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="js/main.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.google.com/?width=5&slant=4&selectioon.family=Rouge+Script" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<style>
+       </style>
+</head>
+<body style="background-color:powderblue;" ng-app="th" ng-controller="main">
+  <div class="main-div ">
+        
+            <br>
+            
+          <div class="container">
+        <div id="title"><span >SCORE={{data.user.score}}</span></div>
+
+       	  <div class="row"> 
+       	  <div class="col-md-1">
+       	  <div id="hint">
+               <h1 id="hint_show" style="height:auto;" ng-show="hint_1">Hints!!! </h1><br>
+               <h1 id="hb1" style="height:auto;" ng-show="hint_1">{{data.solution.hint1}} </h1>
+               <br>
+               <h1 id="hb2" style="height:auto;" ng-show="hint_2">{{data.solution.hint2}} </h1>
+               <br>
+               <h1 id="hb3" style="height:auto;" ng-show="hint_3">{{data.solution.hint3}} </h1>
+             </div>
+       	<!-- <br><br><br> -->
+       	  </div>
+       	  <div class="col-lg-11" >
+       	  <div id="img" >
+       				<img id="img1" src={{data.solution.question}} alt="picture" border="2">
+                        </div>
+                    </div>
+                </div>
+       	  </div>
+       	        
+<form fontsize="80" style="margin-top:10px" >
+		<p> ANSWER : </p>
+                <input type="text" ng-model="ans" placeholder="Type Your Answer" id="answer"  autocomplete="off" onkeyup="this.value = this.value.toLowerCase();">
+                       <p ><a id="wrong" ></a></p>
+		<br><br>
+                <button class="sub-btn"  type="submit"  id="button" ng-click="checkSolution()" required> SUBMIT</button>
+                <button class="log-btn"  type="button" style="text-decoration:none;color:black;" ng-click="logout()">Log out</button>
+                <ul><br><br><br>
+                <li><a href="https://www.facebook.com/groups/2021885708031024/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+		<li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+		<li><a href="http://localhost/TreasureHunt/php/leaderboard.php" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		</ul>
+		</form>
+	</div>
+		<br>
+</div>
+</body>
+</html>

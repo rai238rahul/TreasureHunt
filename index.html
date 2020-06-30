@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="css/stylelogin.css">
+
+
+    </head>
+    <body ng-app="th" ng-controller="login">
+        <div class="login">
+            <h1>Login</h1>
+            <form>
+                <input type="text" name="email" placeholder="Username" required="required" ng-model="check.username"/>
+                <input type="password" name="password" placeholder="Password" required="required" ng-model="check.pass" />
+                <button type="submit" value="Login"  class="btn btn-primary btn-block btn-large" ng-click="checkLogin()">Let me in.</button>
+        </form>
+</div>
+    </body>
+</html>
